@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+    
+    <ImageView
+        android:id="@+id/imgVin"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10px"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:padding="10px"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/nomVin"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/appellationVin"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent" />
+
+
+    </LinearLayout>
+</LinearLayout>

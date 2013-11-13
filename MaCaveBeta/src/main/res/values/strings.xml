@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MaCaveBeta</string>
+    <string name="titre_liste">Liste des vins</string>
+    <string name="titre_parametres">Paramètres</string>
+    <string name="titre_visu">Visualisation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_ajouter">Ajouter</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="title_activity_detail_vin">Détail d\'un vin</string>
+    <string name="nom">Nom</string>
+
+</resources>
