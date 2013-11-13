@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Seb on 11/11/13.
+ * Projet : ${PROJECT_NAME}
+ * Cree par : Seb
+ * Date : 11/11/13
  */
 public class InfoVinAdapter extends BaseAdapter {
     private Context contexte ;
@@ -42,7 +44,7 @@ public class InfoVinAdapter extends BaseAdapter {
         liste.add(new ElementInfoVinTitre(vin.getNom()));
 
         // Ajout de la premiere ligne
-        liste.add(new ElementInfoVinChaine<String>("Année", "2010")) ;
+        liste.add(new ElementInfoVinChaine<String>("Annee", "2010")) ;
      }
 
     @Override
@@ -70,9 +72,9 @@ public class InfoVinAdapter extends BaseAdapter {
             layout = el.getLayout() ;
         }
 
-        if (convertView == null) {
+//        if (convertView == null) {
             convertView = inflater.inflate(layout, null) ;
-        }
+ //       }
 
         if (el != null) {
             el.remplirChamps(convertView) ;
