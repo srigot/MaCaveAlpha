@@ -42,7 +42,7 @@ public class InfoVinAdapter extends BaseAdapter {
         liste.add(new ElementInfoVinTitre(vin.getNom()));
 
         // Ajout de la premiere ligne
-        liste.add(new ElementInfoVinChaine("Année", "2010")) ;
+        liste.add(new ElementInfoVinChaine<String>("Année", "2010")) ;
      }
 
     @Override
