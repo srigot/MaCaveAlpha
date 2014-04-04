@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class DetailVinActivity extends Activity {
@@ -68,6 +69,13 @@ public class DetailVinActivity extends Activity {
             ListView liste = (ListView) view.findViewById(R.id.listInfoVin) ;
             if (liste != null) {
                 liste.setAdapter(infoAdapter);
+                liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        // On modifie le champ selectionne
+                        ((InfoVinAdapter)parent.getAdapter()).modifierChamp(position);
+                    }
+                });
             }
 
         }

@@ -7,6 +7,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.rigot.macavebeta.metier.Vin;
+import com.rigot.macavebeta.ref.RefCouleur;
+import com.rigot.macavebeta.ui.vin.EIVAnnee;
+import com.rigot.macavebeta.ui.vin.EIVCepage;
+import com.rigot.macavebeta.ui.vin.ElementInfoVin;
+import com.rigot.macavebeta.ui.vin.ElementInfoVinChaine;
+import com.rigot.macavebeta.ui.vin.ElementInfoVinEnum;
+import com.rigot.macavebeta.ui.vin.ElementInfoVinTitre;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +29,10 @@ public class InfoVinAdapter extends BaseAdapter {
     private LayoutInflater inflater ;
 
     private List<ElementInfoVin> liste ;
+
+    public Vin getVin() {
+        return vin;
+    }
 
     private Vin vin ;
 
@@ -41,10 +52,35 @@ public class InfoVinAdapter extends BaseAdapter {
         liste = new ArrayList<ElementInfoVin>() ;
 
         // Ajout du titre
-        liste.add(new ElementInfoVinTitre(vin.getNom()));
+        liste.add(new ElementInfoVinTitre(this, vin.getNom()));
 
         // Ajout de la premiere ligne
-        liste.add(new ElementInfoVinChaine<String>("Annee", "2010")) ;
+        liste.add(new EIVAnnee(this));
+
+        // Cepage
+        liste.add(new EIVCepage(this)) ;
+
+        // Couleur
+//        liste.add(new ElementInfoVinEnum<RefCouleur>(this, "Couleur", vin.getCouleur())) ;
+
+        // taille
+//        liste.add(new ElementInfoVinChaine<Float>(this, "Taille", vin.getTaille())) ;
+
+        // Estimation
+//        liste.add(new ElementInfoVinChaine<Float>(this, "Estimation", vin.getEstimation())) ;
+
+        // Note
+
+
+
+        // Debut fin boire
+
+        // Commentaires
+
+        // Degre
+
+
+        // Debut fin temperature
      }
 
     @Override
@@ -80,5 +116,10 @@ public class InfoVinAdapter extends BaseAdapter {
             el.remplirChamps(convertView) ;
         }
         return convertView;
+    }
+
+    public void modifierChamp(int position) {
+        ElementInfoVin el = (ElementInfoVin) getItem(position);
+        el.modifierChamp(contexte);
     }
 }
